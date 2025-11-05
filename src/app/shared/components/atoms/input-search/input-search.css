@@ -18,7 +18,7 @@
   font-family: var(--body-2);
   font-size: var(--body-font-size);
   outline: none;
-  color: var(--color-secondary);
+  color: var(--color-neutral);
 }
 
 .custom-input::placeholder {

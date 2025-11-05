@@ -19,8 +19,9 @@
    HOVER
 =========================== */
 .custom-btn:not(:disabled):hover {
-  background-color: var(--color-secondary); /* Negro más fuerte */
+  background-color: var(--color-neutral); /* Neutral */
   box-shadow: none;
+  transform: scale(1.05);
 }
 
 /* ===========================
@@ -28,7 +29,7 @@
 =========================== */
 .custom-btn:not(:disabled):focus {
   background-color: var(--color-primary); /* Amarillo */
-  color: var(--color-secondary); /* Texto negro */
+  color: var(--color-neutral); /* Texto negro */
   outline: none;
   box-shadow: 0 0 0 3px rgba(245, 183, 0, 0.5); /* var(--shadow-strong) */
 }
