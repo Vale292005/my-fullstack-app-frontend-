@@ -1,1 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===========================
+   VARIABLES DE DISEÑO
+=========================== */
+:root {
+  /* 🎨 Colores */
+  --color-primary: #F5B700;
+  --color-secondary: #000000;
+  --color-neutral: #181818;
+  --color-disabled-bg: #FFFFFF;
+  --color-disabled-border: #D6D6D6;
+
+  /* 🧩 Tipografía */
+  --font-family-base: "Inter", sans-serif;
+
+  /* Titulares */
+  --headline-1: 900 38px/normal var(--font-family-base);
+  --headline-2: 800 28px/normal var(--font-family-base);
+  --headline-3: 700 24px/normal var(--font-family-base);
+
+  /* Cuerpo */
+  --body-1: 400 18px/normal var(--font-family-base);
+  --body-2: 400 16px/normal var(--font-family-base);
+
+  /* Botón */
+  --button-font: 500 12px/normal var(--font-family-base);
+
+  /* Caption y Label */
+  --caption: 400 12px/normal var(--font-family-base);
+  --label: 400 10px/normal var(--font-family-base);
+
+  /* 📏 Espaciados */
+  --space-vertical: 10px;
+  --space-vertical-sm: 8px;
+  --space-horizontal-lg: 50px;
+  --space-horizontal-sm: 10px;
+
+  /* Botones */
+  --btn-padding-x: 20px;
+  --btn-padding-y: 6px;
+  --btn-radius: 10px;
+}
+
+/* ===========================
+   TIPOGRAFÍA
+=========================== */
+h1 {
+  font: var(--headline-1);
+}
+h2 {
+  font: var(--headline-2);
+}
+h3 {
+  font: var(--headline-3);
+}
+p {
+  font: var(--body-1);
+}
+.caption {
+  font: var(--caption);
+}
+.label {
+  font: var(--label);
+}
+
+/* ===========================
+   BOTÓN BASE
+=========================== */
+.custom-btn {
+  font: var(--button-font);
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  border-radius: var(--btn-radius);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  color: white;
+  background-color: var(--color-neutral);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+}
+
+/* HOVER */
+.custom-btn:not(:disabled):hover {
+  background-color: var(--color-secondary);
+  box-shadow: none;
+}
+
+/* FOCUS */
+.custom-btn:not(:disabled):focus {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  outline: none;
+}
+
+/* DISABLED */
+.custom-btn:disabled {
+  background-color: var(--color-disabled-bg);
+  color: var(--color-secondary);
+  border: 2px solid var(--color-disabled-border);
+  box-shadow: none;
+  cursor: not-allowed;
+}

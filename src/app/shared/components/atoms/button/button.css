@@ -1,0 +1,46 @@
+/* ===========================
+   BOTÓN BASE
+=========================== */
+.custom-btn {
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  border: none;
+  border-radius: var(--btn-radius);
+  font: var(--button-font);
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  transition: all 0.2s ease;
+  color: white;
+  background-color: var(--color-neutral); /* Neutral */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .2); /* var(--shadow-default) */
+}
+
+/* ===========================
+   HOVER
+=========================== */
+.custom-btn:not(:disabled):hover {
+  background-color: var(--color-secondary); /* Negro más fuerte */
+  box-shadow: none;
+}
+
+/* ===========================
+   FOCUS
+=========================== */
+.custom-btn:not(:disabled):focus {
+  background-color: var(--color-primary); /* Amarillo */
+  color: var(--color-secondary); /* Texto negro */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(245, 183, 0, 0.5); /* var(--shadow-strong) */
+}
+
+/* ===========================
+   DISABLED
+=========================== */
+.custom-btn:disabled {
+  background-color: var(--color-disabled-bg);
+  color: black;
+  border: 2px solid var(--color-disabled-border);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
