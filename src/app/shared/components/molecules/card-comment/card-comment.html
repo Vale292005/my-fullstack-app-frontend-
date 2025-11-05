@@ -1,0 +1,14 @@
+<div class="card-comment">
+  <div class="header">
+    <h2>Sección de mis Comentarios</h2>
+  </div>
+  <div class="content">
+    <p class="username">{{ username }}</p>
+    <p class="comment-text">{{ comment }}</p>
+    <div class="rating">
+      <span *ngFor="let m of getMangoArray()">🥭</span>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,33 @@
+.card-comment {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 400px;
+}
+
+.card-comment .header h2 {
+  background-color: #F5B700;
+  padding: 0.5rem 1rem;
+  color: #000;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.card-comment .username {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.card-comment .comment-text {
+  margin: 0.5rem 0;
+}
+
+.card-comment .rating {
+  font-size: 1.5rem;
+}
+
+
