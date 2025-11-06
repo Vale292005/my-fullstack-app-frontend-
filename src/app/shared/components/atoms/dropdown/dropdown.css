@@ -1,23 +1,57 @@
-.dropdown select {
-  width: 120px;
-  height: 30px;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid var(--color-neutral);
+.custom-datepicker {
+  width: 132px;
+  height: 34px;
+  background-color: var(--color-primary);
+  border: 2px solid black;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;           /* Centrado vertical */
+  justify-content: space-between;
+  padding: 0 2px;
+  box-sizing: border-box;
+  font-family: var(--body-2);
+  color:var(--color-secondary);
+
+}
+
+.custom-datepicker input {
+  height: 100%;
+  line-height: 34px;            /* Centrado vertical del texto */
+  border: none;
+  background: transparent;
+  padding: 0 4px;
   font-size: 14px;
-  appearance: none;
-  background-color: #f5f5f5;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath fill='black' d='M0 0l6 8 6-8H0z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: calc(100% - 12px) center;
-  background-size: 12px;
+  width: calc(100% - 28px - 8px);
+  cursor: pointer;
 }
 
-.dropdown {
-  position: relative;
-}
-
-.dropdown select:focus {
+.custom-datepicker input:focus {
   outline: none;
-  border-color: var(--color-disabled-border);
 }
+
+.custom-datepicker button {
+  height: 24px;
+  width: 24px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.custom-datepicker .icon-calendar {
+  width: 20px;
+  height: 15px;
+}
+/* Fondo del calendario */
+.custom-calendar-panel .mat-calendar {
+  background-color: #1976d2 !important; /* Cambia aquí al color que quieras */
+}
+
+
+
+
+
+

@@ -1,8 +1,16 @@
-<div class="dropdown">
-  <select>
-    <option>Value</option>
-    <option>Option 1</option>
-    <option>Option 2</option>
-  </select>
+<div class="custom-datepicker">
+  <input matInput
+         [matDatepicker]="picker"
+         [(ngModel)]="selectedDate"
+         placeholder="{{ label }}"
+         readonly>
+  <button (click)="picker.open()">
+    <img [src]="icon" alt="icon" class="icon-calendar">
+  </button>
+  <mat-datepicker #picker (opened)="onDatepickerOpened()"></mat-datepicker>
+
 </div>
+
+
+
 
