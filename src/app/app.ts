@@ -7,15 +7,19 @@ import {Switch} from './shared/components/atoms/switch/switch';
 import {Label} from './shared/components/atoms/label/label';
 import {Input} from './shared/components/atoms/input/input';
 import {CardComment} from './shared/components/molecules/card-comment/card-comment';
+import {Icon} from './shared/components/atoms/icon/icon';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment],
+  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
 export class App {
   protected readonly title = signal('frontend');
+  filterPets(selected: boolean) {
+    console.log("Filtro PET Friendly seleccionado:", selected);
+  }
 }
 

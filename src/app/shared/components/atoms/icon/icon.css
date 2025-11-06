@@ -1,0 +1,40 @@
+.icon-container {
+  width: 40px;
+  height: 64px;
+  display: flex;
+  flex-direction: column; /* para texto debajo del icono */
+  justify-content: center;
+  align-items: center;
+  gap: 4px; /* espacio entre icono y texto */
+}
+.icon-circle{
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.icon-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.icon-label {
+  font-size: 12px;
+  text-align: center;
+}
+/* ✅ Estado seleccionado */
+.icon-container.selected .icon-circle {
+  background: var(--color-secondary);
+}
+
+.icon-container.selected .icon-circle img {
+  filter: brightness(0) invert(1);
+}
+.icon-container:focus {
+  outline: none;
+}

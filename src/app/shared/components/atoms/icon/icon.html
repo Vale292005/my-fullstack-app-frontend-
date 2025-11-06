@@ -1,0 +1,8 @@
+<button class="icon-container"
+[class.selected]="selected"
+(click)="toggleSelect()">
+  <div class="icon-circle">
+  <img [src]="icon" [alt]="label">
+  </div>
+  <span class="icon-label">{{label}}</span>
+</button>
