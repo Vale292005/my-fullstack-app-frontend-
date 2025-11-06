@@ -8,11 +8,12 @@ import {Label} from './shared/components/atoms/label/label';
 import {Input} from './shared/components/atoms/input/input';
 import {CardComment} from './shared/components/molecules/card-comment/card-comment';
 import {Icon} from './shared/components/atoms/icon/icon';
+import {MenuTabs} from './shared/components/molecules/menu-tabs/menu-tabs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon],
+  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

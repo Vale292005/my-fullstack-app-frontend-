@@ -1,0 +1,29 @@
+.menu-container {
+  width: 100%;
+  height: 38px;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-item {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--color-secondary);
+  padding: 4px 8px;
+}
+
+.menu-item:hover {
+  opacity: 0.8;
+}
+
+.menu-item.active {
+  font-weight: 600;
+  color: var(--color-secondary);
+  border-bottom: 2px solid var(--color-secondary);
+}

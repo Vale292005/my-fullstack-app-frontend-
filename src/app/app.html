@@ -37,6 +37,14 @@
   label="Pet Friendly"
   (selectedChange)="filterPets($event)"
 ></app-icon>
+<app-menu-tabs
+  [items]="[
+    { label: 'Alojamiento', route: '/alojamiento' },
+    { label: 'Panel Personal', route: '/panel' },
+    { label: 'Favoritos', route: '/favoritos' }
+  ]">
+</app-menu-tabs>
+
 
 
 

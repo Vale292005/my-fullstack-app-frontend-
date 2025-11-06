@@ -5,7 +5,11 @@
   flex-direction: column; /* para texto debajo del icono */
   justify-content: center;
   align-items: center;
-  gap: 4px; /* espacio entre icono y texto */
+  gap: 4px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
 }
 .icon-circle{
   width: 40px;
