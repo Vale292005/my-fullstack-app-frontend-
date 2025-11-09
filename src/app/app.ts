@@ -10,11 +10,12 @@ import {CardComment} from './shared/components/molecules/card-comment/card-comme
 import {Icon} from './shared/components/atoms/icon/icon';
 import {MenuTabs} from './shared/components/molecules/menu-tabs/menu-tabs';
 import {ArrivalDeparture} from './shared/components/molecules/arrival-departure/arrival-departure';
+import {IconList} from './shared/components/molecules/icon-list/icon-list';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture],
+  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

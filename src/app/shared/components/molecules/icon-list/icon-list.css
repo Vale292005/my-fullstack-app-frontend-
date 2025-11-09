@@ -1,0 +1,27 @@
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;       /* Centra los íconos si sobra espacio */
+  align-items: center;
+  gap: 40px 20px;                /* 40px vertical, 20px horizontal (10px por lado) */
+  padding: 10px;                 /* Espaciado interno del contenedor */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+app-icon {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container {
+  height: 72px;
+  min-width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
