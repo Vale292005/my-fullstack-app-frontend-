@@ -12,11 +12,12 @@ import {MenuTabs} from './shared/components/molecules/menu-tabs/menu-tabs';
 import {ArrivalDeparture} from './shared/components/molecules/arrival-departure/arrival-departure';
 import {IconList} from './shared/components/molecules/icon-list/icon-list';
 import {HotelCard} from './shared/components/molecules/hotel-card/hotel-card';
+import {HotelComponent} from './shared/components/molecules/hotel-component/hotel-component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard],
+  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

@@ -1,0 +1,90 @@
+.hotel-component {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  max-width: 980px;
+  max-height: 200px;
+  height: auto;
+
+
+  margin: 10px auto;
+  padding: 20px;
+
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+/* Imagen */
+.hotel-component img {
+  flex: 0 0 35%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Contenedor derecho */
+.hotel-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Título + calificación */
+.hotel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hotel-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.hotel-rating {
+  font-size: 1.2rem;
+}
+
+/* Descripción */
+.hotel-description {
+  margin: 6px 0 10px 0;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Iconos */
+.icon-list {
+  margin-bottom: 10px;
+}
+
+/* Botones */
+.buttons {
+  display: flex;
+  justify-content: center; /* centra los botones horizontalmente */
+  align-items: center;
+  gap: 12px;
+  margin-top: auto; /* empuja los botones al fondo */
+}
+
+.buttons app-button {
+  width: 140px; /* tamaño uniforme */
+}
+
+
+
+
+
+

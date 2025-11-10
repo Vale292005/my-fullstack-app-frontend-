@@ -1,0 +1,30 @@
+<div class="hotel-component">
+  <img [src]="imageUrl" alt="{{ title }}" />
+
+  <div class="hotel-content">
+    <!-- Título + rating -->
+    <div class="hotel-header">
+      <h2 class="hotel-title">{{ title }}</h2>
+      <div class="hotel-rating">
+        <span *ngFor="let mango of [].constructor(rating)">🥭</span>
+      </div>
+    </div>
+
+    <!-- Descripción -->
+    <p class="hotel-description">{{ description }}</p>
+
+    <!-- Lista de iconos -->
+    <div class="icon-list">
+      <app-icon-list [icons]="icons"></app-icon-list>
+    </div>
+
+    <!-- Botones -->
+    <div class="buttons">
+      <app-button label="Editar"></app-button>
+      <app-button label="Eliminar"></app-button>
+    </div>
+  </div>
+</div>
+
+
+
