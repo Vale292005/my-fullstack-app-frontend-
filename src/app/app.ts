@@ -17,11 +17,12 @@ import {UserCard} from './shared/components/molecules/user-card/user-card';
 import {
   JoinComunity
 } from './shared/components/molecules/join-comunity/join-comunity';
+import {TraditionalCard} from './shared/components/molecules/traditional-card/traditional-card';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity],
+  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

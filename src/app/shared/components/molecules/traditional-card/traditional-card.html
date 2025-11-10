@@ -1,1 +1,13 @@
-<p>traditional-card works!</p>
+<section class="traditional-container">
+  <div class="title">
+    <h3>Estilo tradicional:</h3>
+  </div>
+
+  <div class="carousel">
+    <div class="carousel-track">
+      <!-- 🔹 Recorremos las imágenes -->
+      <img *ngFor="let img of images" [src]="img" alt="Imagen estilo tradicional" />
+    </div>
+  </div>
+</section>
+

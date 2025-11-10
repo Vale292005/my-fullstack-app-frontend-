@@ -1,0 +1,53 @@
+.traditional-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 458px;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 20px; /* espacio vertical */
+}
+
+.title {
+  background-color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 404px;
+  box-sizing: border-box;
+}
+
+.carousel {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari */
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+}
+
+.carousel-track img {
+  height: 100%;
+  max-height: 380px;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.carousel-track img {
+  width: 380px;       /* 🔹 ancho fijo */
+  height: 348px;      /* 🔹 alto fijo */
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  object-fit: cover;  /* 🔹 recorta proporcionalmente */
+  flex-shrink: 0;     /* 🔹 evita que se reduzcan */
+}
