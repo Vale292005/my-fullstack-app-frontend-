@@ -1,0 +1,19 @@
+<div class="hotel-card-container">
+  <div *ngFor="let hotel of hotels" class="hotel-item">
+    <!-- Label -->
+    <h3 class="hotel-label">{{ hotel.label }}</h3>
+
+    <!-- Email -->
+    <p class="hotel-email">{{ hotel.email }}</p>
+
+    <!-- Rating -->
+    <div class="hotel-rating">
+      <span *ngFor="let mango of [].constructor(hotel.rating)">🥭</span>
+    </div>
+
+    <!-- Icon List -->
+    <app-icon-list></app-icon-list>
+  </div>
+</div>
+
+
