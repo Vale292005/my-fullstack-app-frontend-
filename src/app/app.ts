@@ -13,11 +13,12 @@ import {ArrivalDeparture} from './shared/components/molecules/arrival-departure/
 import {IconList} from './shared/components/molecules/icon-list/icon-list';
 import {HotelCard} from './shared/components/molecules/hotel-card/hotel-card';
 import {HotelComponent} from './shared/components/molecules/hotel-component/hotel-component';
+import {UserCard} from './shared/components/molecules/user-card/user-card';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent],
+  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

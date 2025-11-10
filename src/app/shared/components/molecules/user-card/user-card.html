@@ -1,0 +1,20 @@
+<div class="card-container">
+  <div class="card-content">
+    <div class="card-image">
+      <img [src]="imagen" alt="Foto de usuario" />
+    </div>
+
+    <div class="card-info">
+      <p><strong>Nombre:</strong> {{ nombre }}</p>
+      <p><strong>Usuario:</strong> {{ usuario }}</p>
+      <p><strong>Correo electrónico:</strong> {{ correo }}</p>
+      <p><strong>Rol:</strong> {{ rol }}</p>
+
+      <div class="buttons">
+        <app-button label="Editar">.</app-button>
+        <app-button label="Eliminar">.</app-button>
+      </div>
+    </div>
+  </div>
+</div>
+
