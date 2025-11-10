@@ -20,11 +20,12 @@ import {
 import {TraditionalCard} from './shared/components/molecules/traditional-card/traditional-card';
 import {CommentCard} from './shared/components/molecules/comment-card/comment-card';
 import {PersonalPanel} from './shared/components/molecules/personal-panel/personal-panel';
+import {Header} from './shared/components/molecules/header/header';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard, CommentCard, PersonalPanel],
+  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard, CommentCard, PersonalPanel, Header],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

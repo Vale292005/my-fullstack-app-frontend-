@@ -1,0 +1,25 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary);
+  padding: 10px 20px;
+  gap: 15px;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 24px;
+  color: black;
+  white-space: nowrap;
+}
+
+.search {
+  flex-grow: 1;
+  max-width: 600px; /* opcional */
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
