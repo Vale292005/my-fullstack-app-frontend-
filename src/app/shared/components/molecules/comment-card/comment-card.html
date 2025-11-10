@@ -1,0 +1,16 @@
+<div class="comment-card">
+  <h2>Añadir Comentario</h2>
+
+  <form (ngSubmit)="onSubmit()" #commentForm="ngForm" class="comment-form">
+    <textarea
+      name="comentario"
+      [(ngModel)]="comentario"
+      placeholder="Describe tu experiencia con Nosotros"
+      required
+    ></textarea>
+
+    <app-button type="submit" [disabled]="!commentForm.valid">
+      Inicia sesión
+    </app-button>
+  </form>
+</div>

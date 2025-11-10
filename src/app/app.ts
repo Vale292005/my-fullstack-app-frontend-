@@ -18,11 +18,12 @@ import {
   JoinComunity
 } from './shared/components/molecules/join-comunity/join-comunity';
 import {TraditionalCard} from './shared/components/molecules/traditional-card/traditional-card';
+import {CommentCard} from './shared/components/molecules/comment-card/comment-card';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard],
+  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard, CommentCard],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

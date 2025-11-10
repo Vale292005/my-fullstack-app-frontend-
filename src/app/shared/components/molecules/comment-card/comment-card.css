@@ -1,0 +1,31 @@
+.comment-card {
+  background-color: var(--color-primary);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+  color: var(--color-secondary);
+  font-family: Arial, sans-serif;
+}
+
+.comment-form {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+textarea {
+  flex: 1;
+  min-height: 150px;
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 20px;
+  resize: none;
+  outline: none;
+}
+
+/* Si tu app-button necesita alinearse igual que el anterior */
+app-button {
+  align-self: flex-end;
+}
