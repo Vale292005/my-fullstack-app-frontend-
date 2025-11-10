@@ -1,36 +1,57 @@
 .personal-panel {
   background-color: var(--color-primary);
-  border-radius: 20px;
-  padding: 40px;
-  max-width: 600px;
-  margin: 40px auto;
-  color: var(--color-secondary);
-  font-family: "Poppins", Arial, sans-serif;
+  border-radius: 0;
+  padding: calc(var(--space-vertical) * 4);
+  width: 390px;
+  height: 100vh; /* ocupa toda la pantalla */
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: space-between; /* esto empuja el footer abajo */
+  box-sizing: border-box;
+  font-family: var(--font-family-base);
+  user-select: text;
 }
 
-.subtitle {
-  font-size: 18px;
-  opacity: 0.8;
-  margin-top: -10px;
+/* ===========================
+   ESTILOS DE ENLACES
+=========================== */
+.link {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font: var(--body-1);
+  opacity: 0.9;
+  transition: color 0.2s, transform 0.2s;
+  cursor: pointer;
+  display: block;
+  user-select: text;
 }
 
-.panel-list {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
+.link:hover {
+  color: var(--color-secondary);
+  transform: translateX(5px);
 }
 
-.panel-list li {
-  font-size: 18px;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+/* TÍTULO */
+.title {
+  font: var(--headline-1);
+  font-weight: 700;
+  margin-bottom: calc(var(--space-vertical) / 1.5);
+  opacity: 1;
 }
 
-.panel-footer {
-  margin-top: 20px;
-  font-weight: 500;
-  font-size: 18px;
+
+/* FOOTER */
+.footer-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-vertical-sm);
+}
+
+.body-footer {
+  font: var(--headline-3);
+}
+
+.body-footer2 {
+  font: var(--body-2);
 }
