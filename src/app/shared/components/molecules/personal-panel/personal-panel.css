@@ -1,0 +1,36 @@
+.personal-panel {
+  background-color: var(--color-primary);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  color: var(--color-secondary);
+  font-family: "Poppins", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subtitle {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-top: -10px;
+}
+
+.panel-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.panel-list li {
+  font-size: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.panel-footer {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 18px;
+}
