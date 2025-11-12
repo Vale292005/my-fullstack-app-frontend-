@@ -25,11 +25,12 @@ import {Home} from './pages/home/home';
 import {Register} from './pages/register/register';
 import {SignIn} from './pages/sign-in/sign-in';
 import {Resultados} from './pages/resultados/resultados';
+import {Alojamienmto} from './pages/alojamienmto/alojamienmto';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard, CommentCard, PersonalPanel, Header, Home, Register, SignIn, Resultados],
+  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard, CommentCard, PersonalPanel, Header, Home, Register, SignIn, Resultados, Alojamienmto],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

@@ -1,0 +1,161 @@
+/* --- Header --- */
+.header {
+  background: #f3b700;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Sección principal --- */
+.hotel-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* --- Card centrada --- */
+.hotel-card-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* --- Detalles del hotel --- */
+.hotel-details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+}
+
+.hotel-info {
+  flex: 2;
+}
+
+.hotel-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.hotel-email {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.hotel-body {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.hotel-image img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.hotel-booking {
+  background: #f3b700;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 220px;
+}
+
+.calendar-icon {
+  font-size: 3rem;
+}
+
+.btn-reserve {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.hotel-description {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* --- Mapa --- */
+.hotel-location {
+  background: #4e8cff;
+  color: #fff;
+  flex: 1;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+}
+
+.btn-login {
+  margin-top: 10px;
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* --- Comentarios --- */
+.comments-section {
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.section-title {
+  border-bottom: 4px solid #f3b700;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* --- Añadir comentario --- */
+.add-comment-section {
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* --- Responsivo --- */
+@media (max-width: 900px) {
+  .hotel-details-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hotel-image img {
+    max-width: 100%;
+  }
+
+  .hotel-booking {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .hotel-location {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

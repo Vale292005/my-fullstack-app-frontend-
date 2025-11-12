@@ -1,0 +1,95 @@
+<!-- 🔶 Barra superior -->
+<header class="header">
+  <app-header></app-header>
+
+  <!-- Tabs de navegación -->
+  <app-menu-tabs
+    [items]="[
+      { label: 'Menu', route: '/menu' },
+      { label: 'Alojamientos', route: '/alojamientos' },
+      { label: 'Panel Personal', route: '/panel' }
+    ]"
+  ></app-menu-tabs>
+</header>
+
+<!-- 🏨 Información principal del hotel -->
+<section class="hotel-section">
+
+  <!-- 🔹 Hotel Card centrado -->
+  <div class="hotel-card-container">
+    <app-hotel-card
+      [hotels]="[
+        {
+          label: 'Hotel Mango Suites',
+          email: 'hotel.mangosuites@gmail.com',
+          rating: 4
+        }
+      ]"
+    ></app-hotel-card>
+  </div>
+
+  <!-- 🔹 Contenedor con información detallada -->
+  <div class="hotel-details-container">
+    <div class="hotel-info">
+      <h2 class="hotel-name">Hotel Oasis del Mar</h2>
+      <p class="hotel-email">hotelOASISDELMAR@gmail.com</p>
+
+      <div class="hotel-body">
+        <div class="hotel-image">
+          <img src="/habitacion.jpg" alt="Habitación del hotel" />
+        </div>
+
+        <div class="hotel-booking">
+          <div class="calendar-icon">📅</div>
+          <button class="btn-reserve">Reservar</button>
+          <p class="price">$300.000</p>
+        </div>
+      </div>
+
+      <div class="hotel-description">
+        <h3>Descripción</h3>
+        <p>
+          El Hotel Oasis del Mar es un acogedor resort frente al mar que combina comodidad moderna con el encanto natural de la costa mexicana.
+          Ideal para vacaciones familiares o escapadas románticas, el hotel ofrece acceso directo a la playa, jardines tropicales
+          y múltiples servicios pensados para el descanso.
+        </p>
+      </div>
+    </div>
+
+    <!-- 📍 Mapa o ubicación -->
+    <div class="hotel-location">
+      <p>Ingresa aquí para dar tu ubicación</p>
+      <button class="btn-login">Inicia sesión</button>
+    </div>
+  </div>
+</section>
+
+<!-- ⭐ Sección de comentarios -->
+<section class="comments-section">
+  <h3 class="section-title">Sección de mis Comentarios</h3>
+
+  <app-card-comment
+    [username]="'Valeria'"
+    [comment]="'Me encanta este proyecto!'"
+    [rating]="5"
+  ></app-card-comment>
+
+  <app-card-comment
+    [username]="'Valeria'"
+    [comment]="'Me encanta este proyecto!'"
+    [rating]="5"
+  ></app-card-comment>
+
+  <app-card-comment
+    [username]="'Valeria'"
+    [comment]="'Me encanta este proyecto!'"
+    [rating]="5"
+  ></app-card-comment>
+</section>
+
+<!-- 💬 Añadir nuevo comentario -->
+<section class="add-comment-section">
+  <app-comment-card></app-comment-card>
+</section>
+
+
