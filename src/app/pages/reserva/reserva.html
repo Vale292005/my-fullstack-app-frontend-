@@ -1,0 +1,87 @@
+<!-- 🔶 Barra superior -->
+<header class="header">
+  <app-header></app-header>
+
+  <app-menu-tabs
+    [items]="[
+      { label: 'Menú', route: '/menu' },
+      { label: 'Alojamientos', route: '/alojamientos' },
+      { label: 'Panel Personal', route: '/panel' }
+    ]"
+  ></app-menu-tabs>
+</header>
+
+<!-- 🏨 Sección principal del hotel -->
+<section class="hotel-detail">
+
+  <!-- 🔹 Encabezado del hotel -->
+  <div class="hotel-header">
+    <h2 class="hotel-name">Hotel Oasis del Mar</h2>
+    <p class="hotel-email">hotelOASISDELMAR&#64;gmail.com</p>
+
+    <!-- Lista de íconos de servicios -->
+    <app-icon-list
+      [icons]="[
+        { icon: '/spa.png', label: 'Spa' },
+        { icon: '/gym.png', label: 'Gym' },
+        { icon: '/wifi.png', label: 'Wifi' },
+        { icon: '/tv.png', label: 'Tv' },
+        { icon: '/climatizacion.png', label: 'Climatización' },
+        { icon: '/banio-privado.png', label: 'Baño Privado' },
+        { icon: '/desayuno-incluido.png', label: 'Desayuno Incluido' },
+        { icon: '/lavanderia.png', label: 'Lavandería' },
+        { icon: '/parqueadero.png', label: 'Parqueadero' },
+        { icon: '/montania.png', label: 'Montaña' }
+      ]"
+    ></app-icon-list>
+  </div>
+
+  <!-- 🔹 Imagen + Panel lateral de reserva -->
+  <div class="hotel-body">
+    <div class="hotel-image">
+      <img src="/piscina.jpg" alt="Vista del hotel" />
+    </div>
+
+    <!-- 🔸 Panel de reserva -->
+    <div class="hotel-booking">
+      <h3>Reserva</h3>
+
+      <div class="booking-fields">
+        <app-label text="Fecha de ingreso:"></app-label>
+        <app-input type="date" placeholder="Ingresa la fecha de ingreso"></app-input>
+
+        <app-label text="Fecha de salida:"></app-label>
+        <app-input type="date" placeholder="Ingresa la fecha de salida"></app-input>
+      </div>
+
+      <p class="price">$300.000</p>
+
+      <app-button label="Reservar"></app-button>
+
+      <!-- 🔗 Enlace de información -->
+      <p class="contact-info">
+        <a href="#" class="contact-link">Información de contacto</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 🔹 Información adicional -->
+  <div class="hotel-info-extra">
+    <div class="info-block">
+      <app-label text="Fecha de Ingreso:"></app-label>
+      <app-input placeholder="Ingresa la fecha de ingreso"></app-input>
+    </div>
+
+    <div class="info-block">
+      <app-label text="Fecha de salida:"></app-label>
+      <app-input placeholder="Ingresa la fecha de salida"></app-input>
+    </div>
+
+    <div class="info-block">
+      <app-label text="Información sobre cancelación"></app-label>
+    </div>
+
+    <app-button label="Reservar"></app-button>
+  </div>
+
+</section>
