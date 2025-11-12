@@ -21,11 +21,15 @@ import {TraditionalCard} from './shared/components/molecules/traditional-card/tr
 import {CommentCard} from './shared/components/molecules/comment-card/comment-card';
 import {PersonalPanel} from './shared/components/molecules/personal-panel/personal-panel';
 import {Header} from './shared/components/molecules/header/header';
+import {Home} from './pages/home/home';
+import {Register} from './pages/register/register';
+import {SignIn} from './pages/sign-in/sign-in';
+import {Resultados} from './pages/resultados/resultados';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard, CommentCard, PersonalPanel, Header],
+  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard, CommentCard, PersonalPanel, Header, Home, Register, SignIn, Resultados],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

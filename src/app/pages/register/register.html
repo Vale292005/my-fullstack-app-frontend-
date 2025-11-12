@@ -1,0 +1,79 @@
+<!-- 🔶 Barra superior - logo, buscador, acciones -->
+<header class="header">
+  <div class="header-container">
+    <app-header></app-header>
+
+    <app-icon-list
+      [icons]="[
+        { icon: '/wifi.png', label: 'Wifi' },
+        { icon: '/tv.png', label: 'Tv' },
+        { icon: '/climatizacion.png', label: 'Climatización' },
+        { icon: '/banio-privado.png', label: 'Baño Privado' },
+        { icon: '/desayuno-incluido.png', label: 'Desayuno Incluido' },
+        { icon: '/lavanderia.png', label: 'Lavandería' },
+        { icon: '/parqueadero.png', label: 'Parqueadero' }
+      ]">
+    </app-icon-list>
+
+    <!-- ✅ Componente de llegada y salida -->
+    <app-arrival-departure></app-arrival-departure>
+
+    <!-- ✅ Tabs del menú -->
+    <app-menu-tabs
+      [items]="[
+        { label: 'Alojamiento', route: '/alojamiento' },
+        { label: 'Panel Personal', route: '/panel' },
+        { label: 'Favoritos', route: '/favoritos' }
+      ]">
+    </app-menu-tabs>
+
+  </div>
+</header>
+
+<section class="hero register-hero">
+  <div class="form-wrapper">
+
+    <h2 class="title">Crea tu cuenta y comienza tu próxima aventura</h2>
+
+    <p class="subtitle">
+      Regístrate gratis para explorar alojamientos auténticos,
+      chalets con encanto y casas que te harán sentir como en casa.
+    </p>
+
+    <div class="input-group">
+      <label class="input-title">Correo electrónico</label>
+      <app-label text="Correo electrónico:"></app-label>
+      <app-input placeholder="Ingresa tu correo"></app-input>
+    </div>
+
+    <div class="input-group">
+      <label class="input-title">Contraseña</label>
+      <app-label text="Contraseña:"></app-label>
+      <app-input type="password" placeholder="*********"></app-input>
+    </div>
+
+    <div class="input-group">
+      <label class="input-title">Confirmar contraseña</label>
+      <app-label text="Confirmar contraseña:"></app-label>
+      <app-input type="password" placeholder="*********"></app-input>
+    </div>
+
+
+    <div class="terms">
+      <input type="checkbox" />
+      <span>Acepto Términos y Condiciones</span>
+    </div>
+
+    <app-button label="Aceptar"></app-button>
+
+    <p class="switch">
+      ¿Ya tienes cuenta?
+      <a routerLink="/login" class="switch-link">Inicia sesión</a>
+    </p>
+
+    <app-button label="Iniciar Sesión"></app-button>
+
+  </div>
+</section>
+
+

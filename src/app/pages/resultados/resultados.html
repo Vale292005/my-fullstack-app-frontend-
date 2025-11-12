@@ -1,0 +1,38 @@
+<section class="results-section">
+  <div class="results-header">
+    <h2 class="results-title">Resultados:</h2>
+
+    <div class="filter">
+      <select class="filter-select">
+        <option value="value">Value</option>
+        <option value="price">Precio</option>
+        <option value="rating">Valoración</option>
+      </select>
+    </div>
+  </div>
+  <div class="results-list">
+    <app-hotel-component
+      *ngFor="let hotel of hotels"
+      [title]="hotel.title"
+      [description]="hotel.description"
+      [rating]="hotel.rating"
+      [imageUrl]="hotel.imageUrl"
+      [icons]="hotel.icons"
+    ></app-hotel-component>
+    <app-hotel-component
+      title="Hotel Oasis"
+      description="El Hotel Oasis del Mar es un acogedor resort frente al mar que combina comodidad moderna con el encanto natural de la costa mexicana. Ideal para vacaciones familiares o escapadas románticas..."
+      [rating]="5"
+      imageUrl="/tv.png"
+      [icons]="[
+    { icon: '/wifi.png', label: 'Wifi' },
+    { icon: '/tv.png', label: 'Tv' },
+    { icon: '/climatizacion.png', label: 'Climatización' },
+    { icon: '/banio-privado.png', label: 'Baño Privado' },
+    { icon: '/desayuno-incluido.png', label: 'Desayuno Incluido' },
+    { icon: '/lavanderia.png', label: 'Lavandería' },
+    { icon: '/parqueadero.png', label: 'Parqueadero' }
+  ]"
+    ></app-hotel-component>
+  </div>
+</section>

@@ -2,15 +2,18 @@
   display: flex;
   flex-wrap: nowrap;           /* fila única */
   overflow-x: auto;            /* permite scroll horizontal */
-  gap: 20px;                   /* espacio horizontal entre íconos */
+  gap: 30px;                   /* espacio horizontal entre íconos */
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch; /* smooth scroll en móvil */
+  align-items: center;
 
-  /* hide default scrollbar (cross-browser) */
+
   scrollbar-width: thin;        /* Firefox: delgada */
   scrollbar-color: transparent transparent; /* track y thumb transparentes */
+  justify-content: center;
+
 }
 
 /* Chrome, Edge, Safari */
@@ -23,6 +26,7 @@
   background: transparent;       /* thumb transparente */
   border-radius: 3px;
 }
+
 
 
 

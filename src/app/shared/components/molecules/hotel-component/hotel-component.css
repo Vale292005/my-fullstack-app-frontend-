@@ -1,13 +1,14 @@
 .hotel-component {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start; /* Ajustado para que la alineación comience desde arriba */
   justify-content: flex-start;
 
   width: 100%;
   max-width: 980px;
-  max-height: 200px;
-  height: auto;
+  /* CAMBIO 1: Eliminado max-height y height: auto para que se adapte al contenido */
+  max-height: none; /* Asegura que no haya límite de altura máxima */
+  height: auto; /* Ya estaba, pero lo mantenemos para claridad */
 
 
   margin: 10px auto;
@@ -21,10 +22,13 @@
 
 /* Imagen */
 .hotel-component img {
-  flex: 0 0 35%;
-  height: 100%;
+  /* CAMBIO 2: Tamaño fijo de 370px de ancho x 340px de alto */
+  width: 370px; /* Ancho fijo solicitado */
+  height: 240px; /* Alto fijo solicitado (asumo 340px por tu solicitud anterior) */
+  flex: none; /* Desactiva el crecimiento/encogimiento flexible */
+
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: cover; /* Mantiene la imagen sin distorsión */
 }
 
 /* Contenedor derecho */
@@ -33,8 +37,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 100%;
-  overflow: hidden;
+  height: auto; /* Ajustado a automático */
+  overflow: visible; /* Ajustado a visible para que el contenido no se corte */
 }
 
 /* Título + calificación */
@@ -60,9 +64,8 @@
   font-size: 0.95rem;
   color: #444;
   line-height: 1.4;
-  flex-grow: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* REMOVIDO: flex-grow: 1; y overflow/text-overflow */
+  /* Si la altura es automática, estas propiedades pueden causar problemas */
 }
 
 /* Iconos */
@@ -73,16 +76,15 @@
 /* Botones */
 .buttons {
   display: flex;
-  justify-content: center; /* centra los botones horizontalmente */
+  justify-content: center;
   align-items: center;
   gap: 12px;
-  margin-top: auto; /* empuja los botones al fondo */
+  margin-top: 10px; /* Ajustado a un margen fijo, ya que no estamos en altura forzada */
 }
 
 .buttons app-button {
-  width: 140px; /* tamaño uniforme */
+  width: 140px;
 }
-
 
 
 
