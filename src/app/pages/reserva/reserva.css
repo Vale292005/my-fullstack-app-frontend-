@@ -41,8 +41,8 @@
 }
 
 .hotel-image img {
-  width: 100%;
-  max-width: 800px;
+  width: 850px;
+  height: 440px;
   border-radius: 8px;
   border: 5px solid var(--color-primary);
   object-fit: cover;
