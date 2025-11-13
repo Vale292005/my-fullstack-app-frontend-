@@ -4,6 +4,7 @@ import { Button } from './shared/components/atoms/button/button';
 import {InputSearch} from './shared/components/atoms/input-search/input-search';
 import {Dropdown} from './shared/components/atoms/dropdown/dropdown';
 import {Switch} from './shared/components/atoms/switch/switch';
+import { RoleDropdown } from './shared/components/atoms/role-dropdown/role-dropdown';
 import {Label} from './shared/components/atoms/label/label';
 import {Input} from './shared/components/atoms/input/input';
 import {CardComment} from './shared/components/molecules/card-comment/card-comment';
@@ -29,11 +30,12 @@ import {Alojamienmto} from './pages/alojamienmto/alojamienmto';
 import {Reserva} from './pages/reserva/reserva';
 import { PanelPersonal } from './pages/panel-personal/panel-personal';
 import { PoliticasCondiciones } from './pages/politicas-condiciones/politicas-condiciones';
+import { ListadoUsuarios } from './pages/listado-usuarios/listado-usuarios';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard, CommentCard, PersonalPanel, Header, Home, Register, SignIn, Resultados, Alojamienmto, Reserva, PanelPersonal, PoliticasCondiciones],
+  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard, CommentCard, PersonalPanel, Header, Home, Register, SignIn, Resultados, Alojamienmto, Reserva, PanelPersonal, PoliticasCondiciones, ListadoUsuarios, RoleDropdown],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

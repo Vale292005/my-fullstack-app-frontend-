@@ -1,0 +1,32 @@
+<header class="header">
+  <app-header></app-header>
+
+  <app-menu-tabs
+    [items]="[
+      { label: 'Menu', route: '/menu' },
+      { label: 'Alojamientos', route: '/alojamientos' },
+      { label: 'Panel Personal', route: '/panel' }
+    ]"
+  ></app-menu-tabs>
+</header>
+
+<main class="users-container">
+  <section class="filter-section">
+    <h3>Filtra entre usuarios:</h3>
+    <app-role-dropdown (roleSelected)="onRoleChange($event)"></app-role-dropdown>
+  </section>
+
+  <section class="users-list">
+    <div class="user-card-wrapper">
+      <app-user-card></app-user-card>
+    </div>
+
+    <div class="user-card-wrapper">
+      <app-user-card></app-user-card>
+    </div>
+
+    <div class="user-card-wrapper">
+      <app-user-card></app-user-card>
+    </div>
+  </section>
+</main>

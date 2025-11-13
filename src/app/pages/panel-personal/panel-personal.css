@@ -78,6 +78,25 @@
   max-width: 600px;
 }
 
+.traditional-cards-full {
+  width: 100%;
+  background: #f0f0f0;
+  padding: 30px 20px;
+  margin-top: 30px;
+}
+
+.traditional-cards-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.traditional-cards-wrapper app-traditional-card {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .profile-card {
     flex-direction: column;

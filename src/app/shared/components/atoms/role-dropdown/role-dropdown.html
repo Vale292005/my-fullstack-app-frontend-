@@ -1,0 +1,12 @@
+<div class="role-dropdown-container" (mouseleave)="closeDropdown()">
+  <button class="dropdown-btn" (click)="toggleDropdown()">
+    {{ selectedRole }}
+    <img src="/dropdown.png" alt="dropdown" class="dropdown-icon" />
+  </button>
+
+  <div class="dropdown-menu" *ngIf="isOpen">
+    <div class="dropdown-item" *ngFor="let role of roles" (click)="selectRole(role)">
+      {{ role }}
+    </div>
+  </div>
+</div>

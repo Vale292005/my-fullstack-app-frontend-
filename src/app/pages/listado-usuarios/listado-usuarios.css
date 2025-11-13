@@ -1,0 +1,64 @@
+.header {
+  background: var(--color-primary);
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.users-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.filter-section label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  white-space: nowrap;
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--color-primary);
+  padding: 30px 20px;
+  border-radius: 8px;
+}
+
+.user-card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.user-card-wrapper app-user-card {
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-section label {
+    width: 100%;
+  }
+
+  .user-card-wrapper app-user-card {
+    max-width: 100%;
+  }
+}
