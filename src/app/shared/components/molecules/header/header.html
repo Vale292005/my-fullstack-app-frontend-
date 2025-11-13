@@ -4,8 +4,8 @@
   </div>
   <app-input-search class="search"></app-input-search>
   <div class="buttons">
-    <app-button label="Inicio de Sesión."></app-button>
-    <app-button label="Registro."></app-button>
+    <app-button (click)="onLogin()" label="Login"></app-button>
+    <app-button (click)="onRegister()" label="Register"></app-button>
   </div>
 </header>
 

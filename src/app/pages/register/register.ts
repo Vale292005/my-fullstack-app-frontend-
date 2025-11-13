@@ -7,6 +7,7 @@ import {Input} from '../../shared/components/atoms/input/input';
 import {Button} from '../../shared/components/atoms/button/button';
 import {JoinComunity} from '../../shared/components/molecules/join-comunity/join-comunity';
 import {Header} from '../../shared/components/molecules/header/header';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -25,5 +26,11 @@ import {Header} from '../../shared/components/molecules/header/header';
   styleUrl: './register.css'
 })
 export class Register {
+
+  constructor(private router: Router) {}
+
+  goToResultados() {
+    this.router.navigate(['/resultados']);
+  }
 
 }

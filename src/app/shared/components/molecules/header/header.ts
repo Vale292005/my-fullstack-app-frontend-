@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {InputSearch} from '../../atoms/input-search/input-search';
 import {Button} from '../../atoms/button/button';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,13 +14,15 @@ import {Button} from '../../atoms/button/button';
   styleUrls: ['./header.css']
 })
 export class Header {
+  constructor(private router: Router) {}
+
   // Métodos para manejar eventos (login, registro)
   onLogin() {
-    // lógica de login
+    this.router.navigate(['/login']);
   }
 
   onRegister() {
-    // lógica de registro
+    this.router.navigate(['/register']);
   }
 }
 

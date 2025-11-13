@@ -6,7 +6,8 @@ import {MenuTabs} from '../../shared/components/molecules/menu-tabs/menu-tabs';
 import {IconList} from '../../shared/components/molecules/icon-list/icon-list';
 import {ArrivalDeparture} from '../../shared/components/molecules/arrival-departure/arrival-departure';
 import {HotelComponent} from '../../shared/components/molecules/hotel-component/hotel-component';
-import {Header} from '../../shared/components/molecules/header/header';
+import { Button } from '../../shared/components/atoms/button/button';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ import {Header} from '../../shared/components/molecules/header/header';
     IconList,
     ArrivalDeparture,
     HotelComponent,
-    Header
+    Button,
+    RouterLink
   ],
   templateUrl: './home.html',
   standalone: true,
@@ -28,3 +30,6 @@ export class Home {
   @Input() icons: { icon: string; label: string }[] = [];
 
 }
+
+
+

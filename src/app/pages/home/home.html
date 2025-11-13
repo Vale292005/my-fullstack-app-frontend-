@@ -1,26 +1,4 @@
-<!-- 🔶 Barra superior - logo, buscador, acciones -->
-<header class="header" >
-  <div class="header-container">
-  </div>
-  <app-header></app-header>
-  <app-icon-list  [icons]="[
-    { icon: '/wifi.png', label: 'Wifi' },
-    { icon: '/tv.png', label: 'Tv' },
-    { icon: '/climatizacion.png', label: 'Climatización' },
-    { icon: '/banio-privado.png', label: 'Baño Privado' },
-    { icon: '/desayuno-incluido.png', label: 'Desayuno Incluido' },
-    { icon: '/lavanderia.png', label: 'Lavandería' },
-    { icon: '/parqueadero.png', label: 'Parqueadero' }
-  ]"></app-icon-list>
-  <app-arrival-departure></app-arrival-departure>
-  <app-menu-tabs
-    [items]="[
-    { label: 'Alojamiento', route: '/alojamiento' },
-    { label: 'Panel Personal', route: '/panel' },
-    { label: 'Favoritos', route: '/favoritos' }
-  ]">
-  </app-menu-tabs>
-</header>
+<!-- header removed from Home; `app-header` is rendered once in `app.html` -->
 
 <!-- 🏞 Hero principal -->
 <section class="hero">
@@ -28,6 +6,12 @@
 </section>
 
 <!-- ⭐ Secciones de categorías -->
+<!-- Acción rápida: ir a Login/Register desde Home -->
+<div class="home-actions">
+  <a routerLink="/login" class="link-btn"><app-button label="Login"></app-button></a>
+  <a routerLink="/register" class="link-btn"><app-button label="Register"></app-button></a>
+</div>
+
 <section class="section">
     <app-traditional-card></app-traditional-card>
 </section>
