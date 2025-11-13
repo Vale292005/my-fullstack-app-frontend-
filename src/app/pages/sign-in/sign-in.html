@@ -1,60 +1,34 @@
-<!-- 🔶 Barra superior - logo, buscador, acciones -->
-<header class="header">
-  <div class="header-container">
-
-    <app-icon-list
-      [icons]="[
-        { icon: '/wifi.png', label: 'Wifi' },
-        { icon: '/tv.png', label: 'Tv' },
-        { icon: '/climatizacion.png', label: 'Climatización' },
-        { icon: '/banio-privado.png', label: 'Baño Privado' },
-        { icon: '/desayuno-incluido.png', label: 'Desayuno Incluido' },
-        { icon: '/lavanderia.png', label: 'Lavandería' },
-        { icon: '/parqueadero.png', label: 'Parqueadero' }
-      ]">
-    </app-icon-list>
-
-    <!-- ✅ Componente de llegada y salida -->
-    <app-arrival-departure></app-arrival-departure>
-
-    <!-- ✅ Tabs del menú -->
-    <app-menu-tabs
-      [items]="[
-        { label: 'Alojamiento', route: '/alojamiento' },
-        { label: 'Panel Personal', route: '/panel' },
-        { label: 'Favoritos', route: '/favoritos' }
-      ]">
-    </app-menu-tabs>
-
-  </div>
-</header>
-
 <section class="hero register-hero">
   <div class="form-wrapper">
-
     <h2 class="title">¡Bienvenido de nuevo!</h2>
-
     <p class="subtitle">
       Ingresa a tu cuenta y sigue descubriendo lugares acogedores para tu próxima escapada.
     </p>
 
     <div class="input-group">
       <label class="input-title">Correo electrónico</label>
-      <app-label text="Correo electrónico:"></app-label>
-      <app-input placeholder="Ingresa tu correo"></app-input>
+      <input
+        type="email"
+        placeholder="Ingresa tu correo"
+        [(ngModel)]="email"
+        class="form-input"
+      />
     </div>
 
     <div class="input-group">
       <label class="input-title">Contraseña</label>
-      <app-label text="Contraseña:"></app-label>
-      <app-input type="password" placeholder="*********"></app-input>
+      <input
+        type="password"
+        placeholder="*********"
+        [(ngModel)]="password"
+        class="form-input"
+      />
     </div>
 
     <p class="switch">
       <a routerLink="/login" class="switch-link">¿Olvidaste tu contraseña?</a>
     </p>
 
-    <app-button (click)="goToResultados()" label="Ingresar."></app-button>
-
+    <button (click)="goToResultados()">Ingresar</button>
   </div>
 </section>
