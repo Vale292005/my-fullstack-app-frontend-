@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {InputSearch} from '../../atoms/input-search/input-search';
 import {Button} from '../../atoms/button/button';
 import { Router } from '@angular/router';
+import {PersonalPanel} from '../personal-panel/personal-panel';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,8 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [
     InputSearch,
-    Button
+    Button,
+    PersonalPanel
   ],
   styleUrls: ['./header.css']
 })
@@ -23,6 +25,12 @@ export class Header {
 
   onRegister() {
     this.router.navigate(['/register']);
+  }
+  panelOpen = false;
+
+  togglePanel() {
+    this.panelOpen = !this.panelOpen;
+    console.log('Panel abierto?', this.panelOpen); // para verificar en consola
   }
 }
 

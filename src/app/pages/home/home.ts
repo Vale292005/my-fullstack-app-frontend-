@@ -24,12 +24,12 @@ import { RouterLink } from '@angular/router';
   ],
   templateUrl: './home.html',
   standalone: true,
-  styleUrl: './home.css'
+  styleUrls: ['./home.css']  // <-- CORREGIDO AQUÍ
 })
 export class Home {
   @Input() icons: { icon: string; label: string }[] = [];
-
 }
+
 
 
 

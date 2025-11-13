@@ -23,4 +23,27 @@
   display: flex;
   gap: 10px;
 }
+/* Contenedor lateral oculto por defecto */
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: -400px; /* fuera de la pantalla */
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+/* Cuando está abierto */
+.side-panel.open {
+  right: 0;
+}
+.logo {
+  cursor: pointer; /* muestra la mano al pasar el mouse */
+  user-select: none; /* opcional: evita selección de texto al hacer clic */
+}
+
 

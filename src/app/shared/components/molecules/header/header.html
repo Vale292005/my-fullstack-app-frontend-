@@ -1,6 +1,9 @@
 <header class="header-container">
-  <div class="logo">
+  <div class="logo" (click)="togglePanel()">
     Mangoa.
+  </div>
+  <div class="side-panel" [class.open]="panelOpen">
+    <app-personal-panel></app-personal-panel>
   </div>
   <app-input-search class="search"></app-input-search>
   <div class="buttons">

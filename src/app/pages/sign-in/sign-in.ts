@@ -29,4 +29,5 @@ export class SignIn {
   goToResultados() {
     this.router.navigate(['/resultados']);
   }
+
 }
