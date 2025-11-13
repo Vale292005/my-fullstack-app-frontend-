@@ -26,10 +26,11 @@
   <app-label></app-label>
   <app-input></app-input>
 </div>
-<app-card-comment
-  [username]="'Valeria'"
-  [comment]="'Me encanta este proyecto!'"
-  [rating]="5">
+<app-card-comment 
+  [title]="'Mi Comentario'"
+  [comments]="[
+    { username: 'Valeria', text: 'Me encanta este proyecto!', rating: 5 }
+  ]">
 </app-card-comment>
 
 <app-icon
@@ -94,6 +95,12 @@
 <app-resultados></app-resultados>
 <app-alojamienmto></app-alojamienmto>
 <app-reserva></app-reserva>
-
+<app-card-comment 
+  [title]="'Comentarios del Hotel'"
+  [comments]="[
+    { username: 'Juan', text: 'Excelente lugar!', rating: 5 },
+    { username: 'María', text: 'Muy cómodo', rating: 4 }
+  ]">
+</app-card-comment>
 
 

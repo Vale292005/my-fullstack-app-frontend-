@@ -1,12 +1,15 @@
 <div class="card-comment">
   <div class="header">
-    <h2>Sección de mis Comentarios</h2>
+    <h2>{{ title }}</h2>
   </div>
-  <div class="content">
-    <p class="username">{{ username }}</p>
-    <p class="comment-text">{{ comment }}</p>
-    <div class="rating">
-      <span *ngFor="let m of getMangoArray()">🥭</span>
+  
+  <div class="comments-scroll">
+    <div class="comment-item" *ngFor="let comment of comments">
+      <p class="username">{{ comment.username }}</p>
+      <p class="comment-text">{{ comment.text }}</p>
+      <div class="rating">
+        <span *ngFor="let m of getMangoArray(comment.rating)">🥭</span>
+      </div>
     </div>
   </div>
 </div>

@@ -68,23 +68,27 @@
 <section class="comments-section">
   <h3 class="section-title">Sección de mis Comentarios</h3>
 
-  <app-card-comment
-    [username]="'Valeria'"
-    [comment]="'Me encanta este proyecto!'"
-    [rating]="5"
-  ></app-card-comment>
-
-  <app-card-comment
-    [username]="'Valeria'"
-    [comment]="'Me encanta este proyecto!'"
-    [rating]="5"
-  ></app-card-comment>
-
-  <app-card-comment
-    [username]="'Valeria'"
-    [comment]="'Me encanta este proyecto!'"
-    [rating]="5"
-  ></app-card-comment>
+<app-card-comment 
+  [title]="'Comentarios del Hotel'"
+  [comments]="[
+    { username: 'Juan', text: 'Excelente lugar!', rating: 5 },
+    { username: 'María', text: 'Muy cómodo', rating: 4 }
+  ]">
+</app-card-comment>
+<app-card-comment 
+  [title]="'Comentarios del Hotel'"
+  [comments]="[
+    { username: 'Juan', text: 'Excelente lugar!', rating: 5 },
+    { username: 'María', text: 'Muy cómodo', rating: 4 }
+  ]">
+</app-card-comment>
+<app-card-comment 
+  [title]="'Comentarios del Hotel'"
+  [comments]="[
+    { username: 'Juan', text: 'Excelente lugar!', rating: 5 },
+    { username: 'María', text: 'Muy cómodo', rating: 4 }
+  ]">
+</app-card-comment>
 </section>
 
 <!-- 💬 Añadir nuevo comentario -->

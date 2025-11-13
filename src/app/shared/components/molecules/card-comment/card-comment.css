@@ -1,33 +1,75 @@
 .card-comment {
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 1rem;
-  margin: 1rem 0;
+  overflow: hidden;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  max-width: 400px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-comment .header {
+  background-color: var(--color-primary);
+  padding: 1rem;
+  width: 595px;      
 }
 
 .card-comment .header h2 {
-  background-color: #F5B700;
-  padding: 0.5rem 1rem;
+  margin: 0;
   color: #000;
   font-size: 1.2rem;
   text-align: center;
-  border-radius: 4px;
+  font-weight: 600;
 }
 
-.card-comment .username {
+.comments-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-behavior: smooth;
+}
+
+.comments-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.comments-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.comments-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+.comments-scroll::-webkit-scrollbar-thumb:hover {
+  background: #d4a000;
+}
+
+.comment-item {
+  flex-shrink: 0;
+  min-width: 300px;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.comment-item .username {
   font-weight: bold;
-  margin-top: 0.5rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
 }
 
-.card-comment .comment-text {
+.comment-item .comment-text {
   margin: 0.5rem 0;
+  color: #333;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
-.card-comment .rating {
-  font-size: 1.5rem;
+.comment-item .rating {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
 }
 
 
