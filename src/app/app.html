@@ -1,88 +1,4 @@
-<h2>Prueba de Botones Personalizados</h2>
 
-<div style="display: flex; gap: 20px; flex-wrap: wrap;">
-
-  <!-- Estado Neutral -->
-  <app-button label="Neutral"></app-button>
-
-  <!-- Hover → tú lo pruebas pasando el mouse -->
-  <app-button label="Hover"></app-button>
-
-  <!-- Focus → haz click -->
-  <app-button label="Focus"></app-button>
-
-  <!-- Disabled -->
-  <app-button label="Disabled" [disabled]="true"></app-button>
-
-</div>
-<h2>Prueba Input Search</h2>
-
-<div style="width: 500px">
-  <app-input-search placeholder="¿Buscas un rincón acogedor?"></app-input-search>
-</div>
-<div class="atoms-container">
-  <app-switch></app-switch>
-  <app-dropdown></app-dropdown>
-  <app-label></app-label>
-  <app-input></app-input>
-</div>
-<app-card-comment 
-  [title]="'Mi Comentario'"
-  [comments]="[
-    { username: 'Valeria', text: 'Me encanta este proyecto!', rating: 5 }
-  ]">
-</app-card-comment>
-
-<app-icon
-  icon="pet-friendly.png"
-  label="Pet Friendly"
-  (selectedChange)="filterPets($event)"
-></app-icon>
-<app-menu-tabs
-  [items]="[
-    { label: 'Alojamiento', route: '/alojamiento' },
-    { label: 'Panel Personal', route: '/panel' },
-    { label: 'Favoritos', route: '/favoritos' }
-  ]">
-</app-menu-tabs>
-<app-arrival-departure></app-arrival-departure>
-<div class="app-container">
-  <app-icon-list></app-icon-list>
-</div>
-<app-hotel-card
-  [hotels]="[
-    {
-      label: 'Hotel Mango Suites',
-      email: 'hotel.mangosuites@gmail.com',
-      rating: 4
-    },
-    {
-      label: 'Hotel Vista al Mar',
-      email: 'contacto@vistalmar.com',
-      rating: 5
-    },
-    {
-      label: 'EcoLodge Montaña Verde',
-      email: 'info@montanaverde.com',
-      rating: 3
-    }
-  ]">
-</app-hotel-card>
-<app-hotel-component
-  title="Hotel Oasis"
-  description="El Hotel Oasis del Mar es un acogedor resort frente al mar que combina comodidad moderna con el encanto natural de la costa mexicana. Ideal para vacaciones familiares o escapadas románticas..."
-  [rating]="5"
-  imageUrl="/tv.png"
-  [icons]="[
-    { icon: '/wifi.png', label: 'Wifi' },
-    { icon: '/tv.png', label: 'Tv' },
-    { icon: '/climatizacion.png', label: 'Climatización' },
-    { icon: '/banio-privado.png', label: 'Baño Privado' },
-    { icon: '/desayuno-incluido.png', label: 'Desayuno Incluido' },
-    { icon: '/lavanderia.png', label: 'Lavandería' },
-    { icon: '/parqueadero.png', label: 'Parqueadero' }
-  ]"
-></app-hotel-component>
 <app-user-card></app-user-card>
 <app-join-comunity></app-join-comunity>
 <app-traditional-card></app-traditional-card>
@@ -102,5 +18,6 @@
     { username: 'María', text: 'Muy cómodo', rating: 4 }
   ]">
 </app-card-comment>
-
+<app-panel-personal></app-panel-personal>
+<app-politicas-condiciones></app-politicas-condiciones>
 

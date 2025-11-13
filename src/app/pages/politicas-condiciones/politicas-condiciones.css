@@ -1,0 +1,87 @@
+.header {
+  background: var(--color-primary);
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.policies-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.policies-bg {
+  background-image: url('/tv.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 600px;
+}
+
+.policies-content {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 680px;
+  width: 100%;
+}
+
+.policies-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.policy-section {
+  margin-bottom: 25px;
+}
+
+.policy-section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 6px;
+}
+
+.policy-section p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #333;
+  text-align: justify;
+}
+
+.join-community-full {
+  width: 100%;
+  background: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .policies-bg {
+    padding: 30px 15px;
+  }
+
+  .policies-content {
+    padding: 20px;
+  }
+
+  .policies-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .policy-section h2 {
+    font-size: 1rem;
+  }
+
+  .policy-section p {
+    text-align: left;
+    font-size: 0.85rem;
+  }
+}

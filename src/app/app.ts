@@ -27,11 +27,13 @@ import {SignIn} from './pages/sign-in/sign-in';
 import {Resultados} from './pages/resultados/resultados';
 import {Alojamienmto} from './pages/alojamienmto/alojamienmto';
 import {Reserva} from './pages/reserva/reserva';
+import { PanelPersonal } from './pages/panel-personal/panel-personal';
+import { PoliticasCondiciones } from './pages/politicas-condiciones/politicas-condiciones';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard, CommentCard, PersonalPanel, Header, Home, Register, SignIn, Resultados, Alojamienmto, Reserva],
+  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard, CommentCard, PersonalPanel, Header, Home, Register, SignIn, Resultados, Alojamienmto, Reserva, PanelPersonal, PoliticasCondiciones],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

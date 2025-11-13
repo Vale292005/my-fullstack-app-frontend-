@@ -1,0 +1,51 @@
+<header class="header">
+  <app-header></app-header>
+
+  <app-menu-tabs
+    [items]="[
+      { label: 'Menu', route: '/menu' },
+      { label: 'Alojamientos', route: '/alojamientos' },
+      { label: 'Panel Personal', route: '/panel' }
+    ]"
+  ></app-menu-tabs>
+</header>
+
+<div class="icon-list-section">
+  <app-icon-list></app-icon-list>
+</div>
+
+<main class="panel-container">
+  <!-- Perfil del usuario -->
+  <section class="profile-section">
+    <div class="profile-card">
+      <div class="profile-image">
+        <img src="/perfil.jpg" alt="Perfil" />
+      </div>
+      <div class="profile-info">
+        <h1>Juan Pérez</h1>
+        <p><strong>Usuario:</strong> jperez89</p>
+        <p><strong>Correo electrónico:</strong> juan.perez@email.com</p>
+        <p><strong>Rol:</strong> Administrador</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de comentarios -->
+  <section class="comments-section">
+    <h3 class="section-title">Sección de mis Comentarios</h3>
+
+    <app-card-comment
+      [title]="'Comentarios recientes'"
+      [comments]="[
+        { username: 'Juan', text: 'Excelente servicio, volveré pronto.', rating: 5 },
+        { username: 'María', text: 'Muy buen alojamiento y ubicación.', rating: 4 }
+      ]"
+    ></app-card-comment>
+  </section>
+
+  <!-- Traditional Cards -->
+  <section class="traditional-cards-section">
+    <app-traditional-card></app-traditional-card>
+    <app-traditional-card></app-traditional-card>
+  </section>
+</main>
