@@ -22,4 +22,5 @@ import {Input} from '../../shared/components/atoms/input/input';
 })
 export class Reserva {
 
+
 }

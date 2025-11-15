@@ -4,12 +4,14 @@ import {MenuTabs} from '../../shared/components/molecules/menu-tabs/menu-tabs';
 import {ArrivalDeparture} from '../../shared/components/molecules/arrival-departure/arrival-departure';
 import {Header} from '../../shared/components/molecules/header/header';
 import {IconList} from '../../shared/components/molecules/icon-list/icon-list';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-resultados',
   templateUrl: './resultados.html',
   standalone: true,
   imports: [
+    CommonModule,
     HotelComponent,
     MenuTabs,
     ArrivalDeparture,

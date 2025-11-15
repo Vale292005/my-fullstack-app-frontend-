@@ -1,7 +1,12 @@
 <div class="input-container">
-  <input type="text" class="custom-input" [placeholder]="placeholder" />
-  <span class="icon">
-    🔍
-  </span>
+  <input
+    type="text"
+    [(ngModel)]="query"
+    [placeholder]="placeholder"
+    class="custom-input"
+    (keyup.enter)="onSearch()"
+  />
+  <span class="icon" (click)="onSearch()">🔍</span>
 </div>
+
 

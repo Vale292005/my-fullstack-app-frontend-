@@ -1,4 +1,6 @@
 .header-container {
+  position: sticky; /* o fixed si quieres que siempre se vea */
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;

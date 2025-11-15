@@ -4,7 +4,7 @@
   align-items: center;         /* ✅ centra vertical */
   padding: 40px 20px;
   min-height: calc(100vh - 80px); /* ✅ ocupa toda la pantalla menos el header */
-  background: url('/assets/tv.png') no-repeat right center; /* ✅ Imagen al lado derecho */
+  background: url('/assets/tav.png') no-repeat right center; /* ✅ Imagen al lado derecho */
   background-size: 450px auto; /* Ajusta tamaño */
   box-sizing: border-box;
 }

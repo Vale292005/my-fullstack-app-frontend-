@@ -3,20 +3,50 @@
 
     <h2 class="title">¡Crea tu cuenta!</h2>
 
+    <!-- Nombre -->
     <div class="input-group">
-      <label>Correo electrónico</label>
-      <input type="email" placeholder="Ingresa tu correo" [(ngModel)]="email" />
+      <label>Nombre completo</label>
+      <input type="text" [(ngModel)]="nombre" placeholder="Ingresa tu nombre" />
     </div>
 
+    <!-- Teléfono -->
+    <div class="input-group">
+      <label>Teléfono</label>
+      <input type="tel" [(ngModel)]="telefono" placeholder="Ingresa tu teléfono" />
+    </div>
+
+    <!-- Correo electrónico -->
+    <div class="input-group">
+      <label>Correo electrónico</label>
+      <input type="email" [(ngModel)]="email" placeholder="Ingresa tu correo" />
+    </div>
+
+    <!-- Contraseña -->
     <div class="input-group">
       <label>Contraseña</label>
-      <input type="password" placeholder="*********" [(ngModel)]="password" />
+      <input type="password" [(ngModel)]="contrasenha" placeholder="*********" />
     </div>
+
+    <!-- Fecha de nacimiento -->
+    <div class="input-group">
+      <label>Fecha de nacimiento</label>
+      <input type="date" [(ngModel)]="edad" />
+    </div>
+
+    <!-- Aceptación de términos -->
+    <div class="input-group terms">
+      <label>
+        <input type="checkbox" [(ngModel)]="aceptaTerminos" />
+        Acepto los
+      </label>
+      <a (click)="irPoliticas()">Términos y Condiciones</a>
+    </div>
+
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
 
     <button (click)="registrarUsuario()">Registrarme</button>
 
   </div>
 </section>
-
 
 

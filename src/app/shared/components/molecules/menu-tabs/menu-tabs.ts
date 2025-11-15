@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -15,7 +15,13 @@ export interface MenuTabItem {
   styleUrls: ['./menu-tabs.css'],
 })
 export class MenuTabs {
-  @Input() items: MenuTabItem[] = [];
+  // Lista de tabs interna
+  items: MenuTabItem[] = [
+    { label: 'Inicio', route: '' },
+    { label: 'Hoteles', route: '/resultados' },
+    { label: 'Perfil', route: '/perfil' },
+  ];
+
   activeTab: string = '';
 
   constructor(private router: Router) {}
@@ -25,4 +31,5 @@ export class MenuTabs {
     this.router.navigate([item.route]);
   }
 }
+
 

@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms'; // Necesario para ngModel
-import {IconList} from '../../shared/components/molecules/icon-list/icon-list';
-import {ArrivalDeparture} from '../../shared/components/molecules/arrival-departure/arrival-departure';
-import {MenuTabs} from '../../shared/components/molecules/menu-tabs/menu-tabs';
-import {Label} from '../../shared/components/atoms/label/label';
-import {Input} from '../../shared/components/atoms/input/input';
-import {Button} from '../../shared/components/atoms/button/button';
-import {JoinComunity} from '../../shared/components/molecules/join-comunity/join-comunity';
-import {Header} from '../../shared/components/molecules/header/header';
+import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { IconList } from '../../shared/components/molecules/icon-list/icon-list';
+import { ArrivalDeparture } from '../../shared/components/molecules/arrival-departure/arrival-departure';
+import { MenuTabs } from '../../shared/components/molecules/menu-tabs/menu-tabs';
+import { Label } from '../../shared/components/atoms/label/label';
+import { Input } from '../../shared/components/atoms/input/input';
+import { Button } from '../../shared/components/atoms/button/button';
+import { JoinComunity } from '../../shared/components/molecules/join-comunity/join-comunity';
+import { Header } from '../../shared/components/molecules/header/header';
+import {InputText} from '../../shared/components/atoms/input-text/input-text';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-register',
@@ -16,7 +19,9 @@ import {Header} from '../../shared/components/molecules/header/header';
   templateUrl: './register.html',
   styleUrl: './register.css',
   imports: [
-    FormsModule, // 👈 Para usar [(ngModel)]
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
     IconList,
     ArrivalDeparture,
     MenuTabs,
@@ -28,33 +33,56 @@ import {Header} from '../../shared/components/molecules/header/header';
   ]
 })
 export class Register {
-
-  // 🔹 Propiedades para el formulario
+  nombre: string = '';
+  telefono: string = '';
   email: string = '';
-  password: string = '';
+  edad: string = '2000-01-01';
+  // guardaremos como string para enviar LocalDate al backend
+  contrasenha: string = '';
+  aceptaTerminos: boolean = false;
+  errorMessage: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
-  // 🔹 Guardar usuario en localStorage
   registrarUsuario() {
-    if (!this.email || !this.password) {
-      alert('⚠️ Debes completar todos los campos');
+    // Validaciones básicas
+    if (!this.email || !this.contrasenha || !this.nombre || !this.telefono || !this.edad) {
+      this.errorMessage = '⚠️ Completa todos los campos';
+      return;
+    }
+    if (!this.aceptaTerminos) {
+      this.errorMessage = '⚠️ Debes aceptar los términos y condiciones';
       return;
     }
 
-    const nuevoUsuario = {
+    const usuarioDto = {
+      nombre: this.nombre,
+      telefono: this.telefono,
       email: this.email,
-      password: this.password
+      edad: this.edad, // enviar string en formato YYYY-MM-DD
+      contrasenha: this.contrasenha,
+      rol: 'CLIENTE', // valor por defecto
+      activo: true  // se puede cambiar según la lógica de tu backend
     };
 
-    // Guardar como JSON en localStorage
-    localStorage.setItem('usuarioRegistrado', JSON.stringify(nuevoUsuario));
-
-    alert('✅ Registro exitoso. Ahora puedes iniciar sesión.');
     this.router.navigate(['/login']);
+
+    this.http.post('http://localhost:8080/auth/register', usuarioDto)
+      .subscribe({
+        next: (res: any) => {
+          alert('✅ Registro exitoso. Verifica tu correo.');
+          this.router.navigate(['/login']);
+        },
+        error: (err) => {
+          console.error(err);
+          this.errorMessage = err.error || 'Error desconocido';
+        }
+      });
   }
 
-  goToResultados() {
-    this.router.navigate(['/resultados']);
+  irPoliticas() {
+    this.router.navigate(['/politicas-condiciones']);
   }
 }
+
+

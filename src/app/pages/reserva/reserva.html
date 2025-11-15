@@ -1,13 +1,5 @@
 <!-- 🔶 Barra superior -->
 <header class="header">
-
-  <app-menu-tabs
-    [items]="[
-      { label: 'Menú', route: '/menu' },
-      { label: 'Alojamientos', route: '/alojamientos' },
-      { label: 'Panel Personal', route: '/panel' }
-    ]"
-  ></app-menu-tabs>
 </header>
 
 <!-- 🏨 Sección principal del hotel -->
@@ -48,13 +40,13 @@
       <div class="booking-fields">
         <h4>Fecha de ingreso:</h4>
         <app-input type="date" placeholder="Ingresa la fecha de ingreso"></app-input>
+
         <h4>Fecha de salida:</h4>
         <app-input type="date" placeholder="Ingresa la fecha de salida"></app-input>
       </div>
 
       <p class="price">$300.000</p>
 
-      <app-button label="Reservar"></app-button>
 
       <!-- 🔗 Enlace de información -->
       <p class="contact-info">
@@ -67,19 +59,26 @@
   <div class="hotel-info-extra">
     <div class="info-block">
       <h4>Fecha de ingreso:</h4>
-      <app-input placeholder="Ingresa la fecha de ingreso"></app-input>
+      <app-input type="date" placeholder="Ingresa la fecha de ingreso"></app-input>
     </div>
 
     <div class="info-block">
-      <h4>FFecha de salida:</h4>
-      <app-input placeholder="Ingresa la fecha de salida"></app-input>
+      <h4>Fecha de salida:</h4>
+      <app-input type="date" placeholder="Ingresa la fecha de salida"></app-input>
     </div>
 
     <div class="info-block">
-      <app-label text="Información sobre cancelación"></app-label>
+      <h4>Información adicional:</h4>
+      <app-label text="Política de cancelación flexible"></app-label>
+    </div>
+
+    <div class="info-block">
+      <h4>Notas:</h4>
+      <app-label text="Check-in desde las 15:00 h, check-out hasta las 12:00 h"></app-label>
     </div>
 
     <app-button label="Reservar"></app-button>
   </div>
 
 </section>
+

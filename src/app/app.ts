@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import {Component, NgModule, signal} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Button } from './shared/components/atoms/button/button';
 import {InputSearch} from './shared/components/atoms/input-search/input-search';
@@ -31,11 +31,12 @@ import {Reserva} from './pages/reserva/reserva';
 import { PanelPersonal } from './pages/panel-personal/panel-personal';
 import { PoliticasCondiciones } from './pages/politicas-condiciones/politicas-condiciones';
 import { ListadoUsuarios } from './pages/listado-usuarios/listado-usuarios';
+import {HttpClientModule} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard, CommentCard, PersonalPanel, Header, Home, Register, SignIn, Resultados, Alojamienmto, Reserva, PanelPersonal, PoliticasCondiciones, ListadoUsuarios, RoleDropdown],
+  imports: [HttpClientModule,RouterOutlet, Button, InputSearch, Switch, Dropdown, Label, Input, CardComment, Icon, MenuTabs, ArrivalDeparture, IconList, HotelCard, HotelComponent, UserCard, JoinComunity, TraditionalCard, CommentCard, PersonalPanel, Header, Home, Register, SignIn, Resultados, Alojamienmto, Reserva, PanelPersonal, PoliticasCondiciones, ListadoUsuarios, RoleDropdown],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

@@ -28,6 +28,7 @@ import { RouterLink } from '@angular/router';
 })
 export class Home {
   @Input() icons: { icon: string; label: string }[] = [];
+
 }
 
 
