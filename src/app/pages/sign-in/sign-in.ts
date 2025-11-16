@@ -61,6 +61,5 @@ export class SignIn {
           }
         }
       });
-    this.router.navigate(['']);
   }
 }
