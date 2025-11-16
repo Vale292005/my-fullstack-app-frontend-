@@ -22,7 +22,7 @@ export class HotelComponent {
   constructor(private router: Router) {}
 
   reservar() {
-    this.router.navigate(['/reservas']);
+    this.router.navigate(['/alojamiento']);
   }
 }
 

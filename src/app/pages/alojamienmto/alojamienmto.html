@@ -26,7 +26,7 @@
 
       <div class="hotel-body">
         <div class="hotel-image">
-          <img src="/habitacion.jpg" alt="Habitación del hotel" />
+          <img [src]="'assets/imgAlojamiento.png'" alt="Habitación del hotel" />
         </div>
 
         <div class="hotel-booking">
@@ -58,20 +58,6 @@
 <section class="comments-section">
   <h3 class="section-title">Sección de mis Comentarios</h3>
 
-<app-card-comment
-  [title]="'Comentarios del Hotel'"
-  [comments]="[
-    { username: 'Juan', text: 'Excelente lugar!', rating: 5 },
-    { username: 'María', text: 'Muy cómodo', rating: 4 }
-  ]">
-</app-card-comment>
-<app-card-comment
-  [title]="'Comentarios del Hotel'"
-  [comments]="[
-    { username: 'Juan', text: 'Excelente lugar!', rating: 5 },
-    { username: 'María', text: 'Muy cómodo', rating: 4 }
-  ]">
-</app-card-comment>
 <app-card-comment
   [title]="'Comentarios del Hotel'"
   [comments]="[
