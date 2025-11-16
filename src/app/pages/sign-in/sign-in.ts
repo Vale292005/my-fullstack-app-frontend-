@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 import {IconList} from '../../shared/components/molecules/icon-list/icon-list';
 import {ArrivalDeparture} from '../../shared/components/molecules/arrival-departure/arrival-departure';
 import {MenuTabs} from '../../shared/components/molecules/menu-tabs/menu-tabs';
@@ -11,7 +11,7 @@ import {Header} from '../../shared/components/molecules/header/header';
 import {FormsModule} from '@angular/forms';
 import {InputText} from '../../shared/components/atoms/input-text/input-text';
 
-import {HttpClientModule,HttpClient} from '@angular/common/http';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {CommonModule} from '@angular/common';
 
 @Component({
@@ -39,11 +39,12 @@ export class SignIn {
   password: string = '';
   errorMessage: string = '';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) {
+  }
 
   login() {
     console.log('Email:', this.email, 'Password:', this.password);
-    const body = { email: this.email, contrasenha: this.password };
+    const body = {email: this.email, contrasenha: this.password};
 
 
     this.http.post<{ token: string; message: string }>('http://localhost:8080/auth/login', body)
