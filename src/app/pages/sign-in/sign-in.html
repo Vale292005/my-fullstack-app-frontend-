@@ -5,22 +5,36 @@
       Ingresa a tu cuenta y sigue descubriendo lugares acogedores para tu próxima escapada.
     </p>
 
+    <!-- Mostrar errores -->
     <div *ngIf="errorMessage" class="error-msg">{{ errorMessage }}</div>
 
+    <!-- Email -->
     <div class="input-group">
       <label class="input-title">Correo electrónico</label>
-      <app-input-text [(ngModel)]="email" placeholder="Ingresa tu correo"></app-input-text>
+      <input
+        type="email"
+        [(ngModel)]="email"
+        placeholder="Ingresa tu correo"
+        class="form-input"
+      />
     </div>
 
+    <!-- Contraseña -->
     <div class="input-group">
       <label class="input-title">Contraseña</label>
-      <app-input-text [(ngModel)]="password" type="password" placeholder="*********"></app-input-text>
+      <input
+        type="password"
+        [(ngModel)]="password"
+        placeholder="*********"
+        class="form-input"
+      />
     </div>
 
     <p class="switch">
       <a routerLink="/register" class="switch-link">¿No tienes cuenta? Regístrate</a>
     </p>
 
-    <app-button (clicked)="login()" label="Ingresar"></app-button>
+    <button class="btn" (click)="login()">Ingresar</button>
   </div>
 </section>
+

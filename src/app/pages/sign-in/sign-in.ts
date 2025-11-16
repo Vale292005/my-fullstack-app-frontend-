@@ -42,13 +42,15 @@ export class SignIn {
   constructor(private http: HttpClient, private router: Router) {}
 
   login() {
+    console.log('Email:', this.email, 'Password:', this.password);
     const body = { email: this.email, contrasenha: this.password };
+
 
     this.http.post<{ token: string; message: string }>('http://localhost:8080/auth/login', body)
       .subscribe({
         next: (res) => {
           localStorage.setItem('token', res.token); // guardamos JWT
-          this.router.navigate(['/home']); // redirigir al home
+          this.router.navigate(['']); // redirigir al home
         },
         error: (err) => {
           console.error(err);
