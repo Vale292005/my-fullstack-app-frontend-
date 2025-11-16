@@ -126,3 +126,48 @@
     max-width: 100%;
   }
 }
+.date-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Contenedor amarillo */
+.hotel-booking {
+  background: #f4b400;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Botón negro con texto blanco */
+.btn-reserve {
+  background: black;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-reserve:hover {
+  background: #222;
+}
+.date-input {
+  width: 100%;               /* Ocupa todo el ancho disponible */
+  max-width: 100%;           /* EVITA desbordamiento */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;    /* IMPORTANTÍSIMO para que no se salga */
+}

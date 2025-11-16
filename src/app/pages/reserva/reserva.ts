@@ -18,7 +18,7 @@ export class Reserva {
   // 🔹 Aquí pones tu Payment Link creado en Stripe Dashboard
   private paymentLink = 'https://buy.stripe.com/test_4gM00jf3adASc3t27BdEs00';
 
-  pagar() {
+  reservar() {
     // 🔹 Redirige directamente al Payment Link
     window.location.href = this.paymentLink;
   }

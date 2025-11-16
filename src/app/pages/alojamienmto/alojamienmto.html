@@ -19,6 +19,7 @@
   </div>
 
   <!-- 🔹 Contenedor con información detallada -->
+  <!-- 🔹 Contenedor con información detallada -->
   <div class="hotel-details-container">
     <div class="hotel-info">
       <h2 class="hotel-name">Hotel Oasis del Mar</h2>
@@ -31,27 +32,39 @@
 
         <div class="hotel-booking">
           <div class="calendar-icon">📅</div>
-          <button class="btn-reserve">Reservar</button>
+          <button class="btn-reserve" (click)="goToReservation()">Reservar</button>
           <p class="price">$300.000</p>
+
+          <!-- 📍 Caja azul AHORA DENTRO del contenedor amarillo -->
+          <div class="hotel-location">
+            <h3>Ubicación</h3>
+
+            <!-- 🌍 Mapa real -->
+            <iframe
+              class="map-frame"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31520.127485789903!2d-74.082!3d4.6097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMzYnMzQuOSJOIDc0wrAwNCcxOC4wIlc!5e0!3m2!1ses!2sco!4v0000000000"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+
+            <button class="btn-login">Inicia sesión</button>
+          </div>
         </div>
       </div>
 
       <div class="hotel-description">
         <h3>Descripción</h3>
         <p>
-          El Hotel Oasis del Mar es un acogedor resort frente al mar que combina comodidad moderna con el encanto natural de la costa mexicana.
-          Ideal para vacaciones familiares o escapadas románticas, el hotel ofrece acceso directo a la playa, jardines tropicales
-          y múltiples servicios pensados para el descanso.
+          El Hotel Oasis del Mar es un acogedor resort ubicado justo frente a la playa, donde el sonido de las olas y la brisa marina forman parte de la experiencia diaria. Su arquitectura combina elementos modernos con detalles inspirados en la costa mexicana, creando un ambiente cálido y relajado. Las habitaciones cuentan con terrazas o balcones privados, muchas de ellas con vistas directas al mar, y están equipadas con aire acondicionado, televisión inteligente y mobiliario confortable.
+
+          Dentro del hotel, los huéspedes pueden disfrutar de jardines con vegetación tropical, una piscina al aire libre con camastros, acceso directo a la playa y áreas diseñadas para el descanso. El restaurante principal ofrece cocina local con mariscos frescos y platos tradicionales de la región.
+
+          El hotel resulta ideal tanto para familias que buscan vacaciones tranquilas como para parejas que desean una escapada romántica junto al mar. Con su ambiente sereno, atención cercana y entorno natural privilegiado, el Oasis del Mar se convierte en un lugar perfecto para desconectar y disfrutar del encanto auténtico de la costa mexicana.
         </p>
       </div>
     </div>
-
-    <!-- 📍 Mapa o ubicación -->
-    <div class="hotel-location">
-      <p>Ingresa aquí para dar tu ubicación</p>
-      <button class="btn-login">Inicia sesión</button>
-    </div>
   </div>
+
 </section>
 
 <!-- ⭐ Sección de comentarios -->
