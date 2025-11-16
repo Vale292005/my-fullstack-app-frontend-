@@ -12,10 +12,10 @@ export class TraditionalCard {
 
   // 🔹 Lista de imágenes (ajusta las rutas a las que tengas en tu proyecto)
   images: string[] = [
-    'tv.png',
-    'tv.png',
-    'tv.png',
-    'tv.png'
+    '/assets/home2.png',
+    '/assets/home3.png',
+    '/assets/home4.png',
+    '/assets/home5.png'
   ];
 
 }
