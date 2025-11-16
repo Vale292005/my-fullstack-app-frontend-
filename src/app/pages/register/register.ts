@@ -10,8 +10,7 @@ import { Input } from '../../shared/components/atoms/input/input';
 import { Button } from '../../shared/components/atoms/button/button';
 import { JoinComunity } from '../../shared/components/molecules/join-comunity/join-comunity';
 import { Header } from '../../shared/components/molecules/header/header';
-import {InputText} from '../../shared/components/atoms/input-text/input-text';
-import {CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-register',
@@ -36,8 +35,7 @@ export class Register {
   nombre: string = '';
   telefono: string = '';
   email: string = '';
-  edad: string = '2000-01-01';
-  // guardaremos como string para enviar LocalDate al backend
+  edad: string = '';
   contrasenha: string = '';
   aceptaTerminos: boolean = false;
   errorMessage: string = '';
@@ -45,31 +43,80 @@ export class Register {
   constructor(private http: HttpClient, private router: Router) {}
 
   registrarUsuario() {
-    // Validaciones básicas
-    if (!this.email || !this.contrasenha || !this.nombre || !this.telefono || !this.edad) {
-      this.errorMessage = '⚠️ Completa todos los campos';
+    // VALIDACIONES ----------------------------
+
+    // Nombre
+    if (this.nombre.trim().length < 3) {
+      this.errorMessage = '⚠️ El nombre debe tener al menos 3 caracteres';
       return;
     }
+
+    // Teléfono: solo números y mínimo 7 dígitos
+    const telefonoRegex = /^[0-9]{7,15}$/;
+    if (!telefonoRegex.test(this.telefono)) {
+      this.errorMessage = '⚠️ El teléfono debe tener entre 7 y 15 dígitos';
+      return;
+    }
+
+    // Email válido
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(this.email)) {
+      this.errorMessage = '⚠️ Ingresa un correo electrónico válido';
+      return;
+    }
+
+    // Edad mínima: mayor de 18 años
+    const birthDate = new Date(this.edad);
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+
+    // Ajuste de cumpleaños
+    if (
+      monthDifference < 0 ||
+      (monthDifference === 0 && today.getDate() < birthDate.getDate())
+    ) {
+      age--;
+    }
+
+    if (age < 18) {
+      this.errorMessage = '⚠️ Debes ser mayor de edad (18+) para registrarte';
+      return;
+    }
+
+    // Contraseña mínima y máxima
+    if (this.contrasenha.length < 6) {
+      this.errorMessage = '⚠️ La contraseña debe tener mínimo 6 caracteres';
+      return;
+    }
+    if (this.contrasenha.length > 20) {
+      this.errorMessage = '⚠️ La contraseña no puede exceder 20 caracteres';
+      return;
+    }
+
+    // Debe aceptar los términos
     if (!this.aceptaTerminos) {
       this.errorMessage = '⚠️ Debes aceptar los términos y condiciones';
       return;
     }
 
+    // FIN VALIDACIONES -------------------------
+
     const usuarioDto = {
       nombre: this.nombre,
       telefono: this.telefono,
       email: this.email,
-      edad: this.edad, // enviar string en formato YYYY-MM-DD
+      edad: this.edad,
       contrasenha: this.contrasenha,
-      rol: 'CLIENTE', // valor por defecto
-      activo: true  // se puede cambiar según la lógica de tu backend
+      rol: 'CLIENTE',
+      activo: true
     };
 
-    this.router.navigate(['/login']);
-
+    // Realizar la petición SOLO después de validaciones
     this.http.post('http://localhost:8080/auth/register', usuarioDto)
       .subscribe({
-        next: (res: any) => {
+        next: () => {
           alert('✅ Registro exitoso. Verifica tu correo.');
           this.router.navigate(['/login']);
         },
@@ -84,5 +131,3 @@ export class Register {
     this.router.navigate(['/politicas-condiciones']);
   }
 }
-
-
