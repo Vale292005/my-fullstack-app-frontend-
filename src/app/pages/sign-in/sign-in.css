@@ -1,16 +1,34 @@
 .register-hero {
+  position: relative;                /* Necesario para capas */
   display: flex;
-  justify-content: center;       /* centra horizontal */
-  align-items: center;           /* centra vertical */
+  justify-content: center;
+  align-items: center;
   padding: 40px 20px;
-  min-height: calc(100vh - 80px); /* ocupa toda la pantalla menos el header */
-  background: url('/assets/home1.png') no-repeat right center; /* imagen al lado derecho */
-  background-size: 450px auto;   /* ajusta tamaño */
-  box-sizing: border-box;
+  min-height: calc(100vh - 80px);
+
+  /* ⭐ FONDO DE LA IMAGEN — AHORA DETRÁS DEL FORMULARIO */
+  background: url('/assets/home1.png') no-repeat center center;
+  background-size: cover;
+
+  /* Para oscurecer un poco y dar contraste */
 }
 
-/* Fondo blanco para tu formulario */
+.register-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.3); /* oscurece y mejora legibilidad */
+  z-index: 1;
+}
+
+/* Fondo blanco del formulario */
 .form-wrapper {
+  position: relative;
+  z-index: 2; /* ⭐ Hace que el formulario quede encima del fondo */
   background: #fff;
   width: 100%;
   max-width: 450px;
@@ -19,7 +37,7 @@
   box-shadow: 0px 4px 14px rgba(0,0,0,0.12);
   display: flex;
   flex-direction: column;
-  align-items: center;           /* centra contenido */
+  align-items: center;
   text-align: center;
   gap: 18px;
 }
@@ -38,7 +56,7 @@
 .input-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;                      /* separación label/input */
+  gap: 8px;
   width: 100%;
 }
 
@@ -46,7 +64,7 @@
   font-size: 14px;
   font-weight: 600;
   color: #333;
-  text-align: left;               /* si quieres que el label quede alineado a la izquierda */
+  text-align: left;
 }
 
 input.form-input {
@@ -70,13 +88,6 @@ input.form-input:focus {
   margin-bottom: 10px;
 }
 
-.terms {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-}
-
 .switch {
   font-size: 14px;
 }
@@ -87,17 +98,16 @@ input.form-input:focus {
   font-weight: bold;
 }
 
-/* Botón centrado */
 app-button {
   width: 100%;
   max-width: 300px;
 }
 
-/* ✅ Mobile */
+/* Responsive */
 @media (max-width: 768px) {
   .register-hero {
-    background-size: 250px;
-    background-position: center bottom; /* imagen abajo en celular */
-    padding-bottom: 200px;              /* espacio para que no tape el formulario */
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 60px;
   }
 }

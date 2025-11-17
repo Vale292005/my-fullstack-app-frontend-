@@ -1,16 +1,34 @@
 .register-hero {
+  position: relative;                 /* necesario para capas */
   display: flex;
-  justify-content: center;     /* centra horizontal */
-  align-items: center;         /* ✅ centra vertical */
+  justify-content: center;            /* centra horizontal */
+  align-items: center;                /* centra vertical */
   padding: 40px 20px;
-  min-height: calc(100vh - 80px); /* ✅ ocupa toda la pantalla menos el header */
-  background: url('/assets/home2.png') no-repeat right center; /* ✅ Imagen al lado derecho */
-  background-size: 450px auto; /* Ajusta tamaño */
+  min-height: calc(100vh - 80px);
+
+  /* Imagen de fondo real detrás del formulario */
+  background: url('/assets/home2.png') no-repeat center center;
+  background-size: cover;
+
   box-sizing: border-box;
 }
 
-/* Fondo blanco para tu formulario */
+/* Oscurecer un poco el fondo para que el formulario resalte */
+.register-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.25); /* capa oscura */
+  z-index: 1;
+}
+
+/* Formulario encima del fondo */
 .form-wrapper {
+  position: relative;
+  z-index: 2;                     /* encima del fondo */
   background: #fff;
   width: 100%;
   max-width: 450px;
@@ -19,6 +37,8 @@
   box-shadow: 0px 4px 14px rgba(0,0,0,0.12);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 18px;
 }
 
@@ -29,31 +49,30 @@
 }
 
 .subtitle {
-  text-align: center;
   font-size: 14px;
   color: #555;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;                    /* Separación label/input */
+  gap: 8px;
   width: 100%;
 }
 
 .input-group app-label {
   font-size: 14px;
   font-weight: 600;
-  text-align: center;         /* ✅ Centrado */
-  display: block;
+  text-align: left;   /* etiqueta alineada a la izquierda */
   color: #333;
+  display: block;
 }
 
 .input-group app-input {
   width: 100%;
 }
-
 
 .terms {
   display: flex;
@@ -63,8 +82,8 @@
 }
 
 .switch {
-  text-align: center;
   font-size: 14px;
+  text-align: center;
 }
 
 .switch-link {
@@ -73,20 +92,11 @@
   font-weight: bold;
 }
 
-/* ✅ Mobile */
+/* Mobile */
 @media (max-width: 768px) {
   .register-hero {
-    background-size: 250px;
-    background-position: center bottom; /* ✅ imagen abajo en celular */
-    padding-bottom: 200px; /* espacio para que no tape el formulario */
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 60px;
   }
 }
-.form-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;      /* ✅ Centrar todo */
-  text-align: center;       /* ✅ Centra contenido por si acaso */
-  gap: 18px;
-}
-
-
